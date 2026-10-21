@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rafael Soares | Consultoria Individual para Donos de Empresa</title>
+<meta name="description" content="Sessão individual e online com Rafael Soares para transformar seu esforço diário em lucro real, sua operação em um sistema seguro e seu cansaço em qualidade de vida.">
+<meta name="theme-color" content="#070B16">
+<meta property="og:title" content="Rafael Soares | Consultoria Individual">
+<meta property="og:description" content="Transforme seu esforço em lucro, sua operação em sistema e seu cansaço em qualidade de vida.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070B16; --bg-2:#0B1120; --surface:#0F1629; --surface-2:#131C33;
+  --line:rgba(255,255,255,.08); --line-gold:rgba(214,178,94,.28);
+  --text:#F4EFE6; --muted:#A3A9B8; --dim:#6B7286;
+  --gold:#D6B25E; --gold-2:#F1D78F; --gold-3:#A8842F;
+  --grad-gold:linear-gradient(135deg,#F1D78F 0%,#D6B25E 45%,#A8842F 100%);
+  --radius:20px; --max:1180px;
+  --serif:"Fraunces",Georgia,serif; --sans:"Manrope",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.02em}
+.gold{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+em.gold{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+section{position:relative;padding:110px 0}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-.025em;margin:18px 0 20px}
+.lead{color:var(--muted);font-size:clamp(17px,1.6vw,19px);max-width:620px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:19px 30px;border-radius:999px;font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase;transition:transform .25s ease,box-shadow .25s ease,background .25s;white-space:nowrap}
+.btn-gold{background:var(--grad-gold);color:#14100A;box-shadow:0 10px 40px -10px rgba(214,178,94,.55),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 50px -12px rgba(214,178,94,.75),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-ghost{border:1px solid var(--line-gold);color:var(--text);text-transform:none;letter-spacing:0;font-weight:600}
+.btn-ghost:hover{background:rgba(214,178,94,.08);border-color:var(--gold)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn .arrow{transition:transform .25s}
+.btn:hover .arrow{transform:translateX(4px)}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(7,11,22,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-weight:800;font-size:19px;letter-spacing:-.01em}
+.logo span{color:var(--gold)}
+.nav .btn{padding:11px 20px;font-size:12px}
+
+/* Hero */
+.hero{padding:150px 0 90px;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:900px;height:900px;background:radial-gradient(circle,rgba(214,178,94,.16),transparent 62%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at 30% 40%,#000 0%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 30% 40%,#000 0%,transparent 70%);opacity:.5;pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.2vw,80px);line-height:1.02;letter-spacing:-.035em;margin:26px 0 28px}
+.hero h1 .line{display:block}
+.hero p.lead{margin-bottom:38px}
+.hero p.lead strong{color:var(--text);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.trust{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:34px;color:var(--muted);font-size:14px}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.trust svg{width:16px;height:16px;color:var(--gold)}
+.pulse{width:8px;height:8px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+
+.video-card{position:relative;aspect-ratio:9/16;max-height:640px;width:100%;border-radius:28px;overflow:hidden;background:linear-gradient(160deg,#18223D,#0A0F1D);border:1px solid var(--line-gold);box-shadow:0 40px 100px -30px rgba(0,0,0,.8),0 0 0 8px rgba(255,255,255,.02)}
+.video-card video{width:100%;height:100%;object-fit:cover}
+.video-card .play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:linear-gradient(180deg,rgba(7,11,22,.1),rgba(7,11,22,.75));transition:opacity .3s}
+.video-card .play.hidden{opacity:0;pointer-events:none}
+.play-btn{width:84px;height:84px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(214,178,94,.15),0 20px 50px -10px rgba(214,178,94,.6);transition:transform .3s}
+.video-card:hover .play-btn{transform:scale(1.06)}
+.play-btn svg{width:30px;height:30px;color:#14100A;margin-left:4px}
+.play small{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--text);font-weight:700}
+.video-tag{position:absolute;left:16px;bottom:16px;right:16px;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:rgba(7,11,22,.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);font-size:13px;z-index:2}
+.video-tag b{display:block;font-size:14px}
+.video-tag .av{width:36px;height:36px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;color:#14100A;font-weight:800;font-size:13px;flex:none}
+
+/* Marquee */
+.marquee{border-block:1px solid var(--line);padding:22px 0;overflow:hidden;background:var(--bg-2)}
+.marquee-track{display:flex;gap:56px;width:max-content;animation:scroll 40s linear infinite}
+.marquee-track span{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--muted);white-space:nowrap;display:inline-flex;align-items:center;gap:56px}
+.marquee-track span::after{content:"✦";color:var(--gold);font-style:normal;font-size:14px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* Diagnóstico */
+.diag{background:var(--bg-2)}
+.diag-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:56px}
+.diag-layout{display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start}
+.groups{display:grid;gap:28px}
+.group h3{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.group h3 i{font-style:normal;color:var(--gold)}
+.pain{display:flex;gap:16px;align-items:flex-start;width:100%;text-align:left;padding:18px 20px;border-radius:16px;background:var(--surface);border:1px solid var(--line);margin-bottom:10px;transition:border-color .2s,background .2s,transform .2s;color:#D7D9E0;font-size:16px;line-height:1.5}
+.pain:hover{border-color:rgba(214,178,94,.35);transform:translateX(3px)}
+.pain .box{width:24px;height:24px;flex:none;border-radius:7px;border:1.5px solid rgba(255,255,255,.22);display:grid;place-items:center;margin-top:1px;transition:all .2s}
+.pain .box svg{width:14px;height:14px;opacity:0;transform:scale(.5);transition:all .2s;color:#14100A}
+.pain[aria-pressed="true"]{border-color:var(--gold);background:linear-gradient(135deg,rgba(214,178,94,.12),rgba(214,178,94,.03));color:var(--text)}
+.pain[aria-pressed="true"] .box{background:var(--grad-gold);border-color:transparent}
+.pain[aria-pressed="true"] .box svg{opacity:1;transform:scale(1)}
+.meter{position:sticky;top:96px;padding:30px;border-radius:var(--radius);background:linear-gradient(170deg,var(--surface-2),var(--surface));border:1px solid var(--line-gold);box-shadow:0 30px 80px -40px rgba(0,0,0,.9)}
+.meter .count{font-family:var(--serif);font-size:84px;line-height:1;letter-spacing:-.04em}
+.meter .count small{font-size:28px;color:var(--dim)}
+.meter .bar{height:6px;border-radius:99px;background:rgba(255,255,255,.08);margin:22px 0 18px;overflow:hidden}
+.meter .bar i{display:block;height:100%;width:0;background:var(--grad-gold);border-radius:inherit;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.meter p{color:var(--muted);font-size:15px;margin-bottom:22px;min-height:72px}
+.meter p strong{color:var(--text)}
+.meter .btn{width:100%}
+.meter .btn[aria-disabled="true"]{filter:grayscale(.7) brightness(.7);pointer-events:none}
+
+/* Cost */
+.cost{text-align:center}
+.cost h2{max-width:900px;margin-inline:auto}
+.cost .lead{margin:0 auto}
+.cost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px;text-align:left}
+.cost-card{padding:30px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface)}
+.cost-card .k{font-family:var(--serif);font-size:44px;line-height:1;margin-bottom:14px}
+.cost-card h4{font-size:18px;margin-bottom:8px}
+.cost-card p{color:var(--muted);font-size:15px}
+
+/* Steps */
+.steps{background:var(--bg-2)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:60px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.step{padding:40px 34px;border-right:1px solid var(--line);position:relative;background:var(--surface)}
+.step:last-child{border-right:0}
+.step .n{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold);margin-bottom:46px;display:block}
+.step h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1;margin-bottom:14px;letter-spacing:-.02em}
+.step p{color:var(--muted);font-size:15px}
+
+/* Deliverables */
+.deliv-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.deliv-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.deliv{padding:26px;border-radius:18px;background:var(--surface);border:1px solid var(--line);transition:border-color .25s,transform .25s}
+.deliv:hover{border-color:var(--line-gold);transform:translateY(-3px)}
+.deliv .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(214,178,94,.1);border:1px solid var(--line-gold);margin-bottom:18px}
+.deliv .ic svg{width:20px;height:20px;color:var(--gold)}
+.deliv h4{font-size:17px;margin-bottom:6px}
+.deliv p{color:var(--muted);font-size:14px;line-height:1.55}
+
+/* Quote / about */
+.about{background:var(--bg-2);overflow:hidden}
+.about blockquote{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.15;letter-spacing:-.025em;max-width:980px}
+.about blockquote::before{content:"“";display:block;font-size:120px;line-height:.6;color:var(--gold);margin-bottom:10px}
+.about .sig{margin-top:36px;display:flex;align-items:center;gap:16px;color:var(--muted)}
+.about .sig .av{width:52px;height:52px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;color:#14100A;font-weight:800}
+.about .sig b{color:var(--text);display:block}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px}
+.pillar{border-top:1px solid var(--line-gold);padding-top:22px}
+.pillar h4{font-size:18px;margin-bottom:6px}
+.pillar p{color:var(--muted);font-size:15px}
+
+/* Fit */
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:56px}
+.fit{padding:36px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface)}
+.fit.yes{border-color:var(--line-gold);background:linear-gradient(160deg,rgba(214,178,94,.08),var(--surface) 60%)}
+.fit h3{font-family:var(--serif);font-weight:400;font-size:28px;margin-bottom:22px}
+.fit ul{list-style:none;display:grid;gap:14px}
+.fit li{display:flex;gap:12px;color:#D7D9E0;font-size:16px}
+.fit li svg{width:20px;height:20px;flex:none;margin-top:2px}
+.fit.yes li svg{color:var(--gold)}
+.fit.no li{color:var(--muted)}
+.fit.no li svg{color:var(--dim)}
+
+/* Offer */
+.offer{background:radial-gradient(ellipse at 50% 0%,rgba(214,178,94,.14),transparent 60%),var(--bg-2)}
+.offer-card{max-width:880px;margin:56px auto 0;display:grid;grid-template-columns:1fr 1fr;border-radius:28px;overflow:hidden;border:1px solid var(--line-gold);background:var(--surface);box-shadow:0 60px 120px -50px rgba(0,0,0,.9),0 0 80px -30px rgba(214,178,94,.25)}
+.offer-left{padding:44px;border-right:1px solid var(--line)}
+.offer-left h3{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
+.offer-left ul{list-style:none;display:grid;gap:15px}
+.offer-left li{display:flex;gap:12px;font-size:16px}
+.offer-left li svg{width:20px;height:20px;color:var(--gold);flex:none;margin-top:2px}
+.offer-right{padding:44px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(170deg,var(--surface-2),var(--surface))}
+.badge{align-self:flex-start;padding:7px 14px;border-radius:99px;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;background:rgba(214,178,94,.12);color:var(--gold-2);border:1px solid var(--line-gold);margin-bottom:24px;display:inline-flex;gap:8px;align-items:center}
+.old{color:var(--dim);font-size:16px}
+.old s{text-decoration-color:var(--gold);text-decoration-thickness:2px}
+.price{display:flex;align-items:flex-start;gap:8px;margin:6px 0 4px}
+.price .cur{font-size:22px;color:var(--gold);margin-top:16px;font-weight:700}
+.price .val{font-family:var(--serif);font-size:96px;line-height:1;letter-spacing:-.045em}
+.save{font-size:14px;color:#86EFAC;margin-bottom:28px;font-weight:600}
+.offer-right .btn{width:100%}
+.offer-right .fine{margin-top:16px;font-size:13px;color:var(--dim);text-align:center}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+details{border-bottom:1px solid var(--line);padding:6px 0}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:600;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+summary .pm{width:30px;height:30px;flex:none;border-radius:50%;border:1px solid var(--line-gold);position:relative;transition:transform .3s}
+summary .pm::before,summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--gold);transform:translate(-50%,-50%)}
+summary .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+details[open] summary .pm::after{transform:translate(-50%,-50%) rotate(0)}
+details p{color:var(--muted);padding:0 50px 24px 0}
+
+/* Final */
+.final{text-align:center;padding:140px 0;overflow:hidden}
+.final::before{content:"";position:absolute;left:50%;top:50%;width:1000px;height:600px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(214,178,94,.18),transparent 65%);pointer-events:none}
+.final h2{font-size:clamp(40px,6.5vw,84px);max-width:1000px;margin:20px auto 24px;position:relative}
+.final .lead{margin:0 auto 40px;position:relative}
+.final .cta-row{justify-content:center;position:relative}
+
+footer{border-top:1px solid var(--line);padding:40px 0 120px;color:var(--dim);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+
+/* Floating */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 14px 40px -8px rgba(37,211,102,.55);transition:transform .25s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;color:#fff}
+.sticky-cta{display:none}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.marquee-track,.pulse{animation:none}html{scroll-behavior:auto}}
+
+/* Responsive */
+@media (max-width:980px){
+  section{padding:84px 0}
+  .hero{padding:120px 0 70px;min-height:auto}
+  .hero-grid,.diag-head,.diag-layout,.deliv-grid,.faq-grid{grid-template-columns:1fr;gap:40px}
+  .video-card{max-width:380px;margin:0 auto}
+  .meter{position:relative;top:0}
+  .steps-grid{grid-template-columns:1fr}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .step .n{margin-bottom:20px}
+  .cost-grid,.pillars{grid-template-columns:1fr}
+  .offer-card{grid-template-columns:1fr}
+  .offer-left{border-right:0;border-bottom:1px solid var(--line)}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .nav .btn{display:none}
+  .hero h1{font-size:clamp(36px,10.5vw,48px)}
+  .cta-row .btn{width:100%}
+  .deliv-list,.fit-grid{grid-template-columns:1fr}
+  .offer-left,.offer-right,.fit{padding:28px 22px}
+  .price .val{font-size:78px}
+  details p{padding-right:0}
+  .wa-float{bottom:92px;right:16px;width:54px;height:54px}
+  .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(7,11,22,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s}
+  .sticky-cta.show{transform:none}
+  .sticky-cta .btn{width:100%;padding:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#topo" class="logo">RAFAEL<span>SOARES</span></a>
+    <a href="#oferta" class="btn btn-gold" data-cta>Agendar sessão</a>
+  </div>
+</header>
+
+<main id="topo">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow reveal">Consultoria individual · online</span>
+      <h1 class="reveal">
+        <span class="line">Seu esforço vira <em class="gold">lucro</em>.</span>
+        <span class="line">Sua operação vira <em class="gold">sistema</em>.</span>
+        <span class="line">Seu cansaço vira <em class="gold">vida</em>.</span>
+      </h1>
+      <p class="lead reveal">Uma sessão individual comigo, <strong>Rafael Soares</strong>, para olhar de perto o seu cenário e decidir juntos o próximo passo da sua empresa. <strong>Sem grupo, sem gravação, sem enrolação.</strong></p>
+      <div class="cta-row reveal">
+        <a href="#oferta" class="btn btn-gold">Quero agendar minha sessão
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#" class="btn btn-ghost" data-wa="Olá Rafael! Tenho uma dúvida sobre a consultoria individual.">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Tirar dúvida no WhatsApp
+        </a>
+      </div>
+      <div class="trust reveal">
+        <span><i class="pulse"></i> Vagas limitadas por mês</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg> 100% online</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Atendimento 1 a 1</span>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="video-card" id="videoCard">
+        <video id="heroVideo" playsinline preload="metadata"></video>
+        <button class="play" id="playBtn" aria-label="Assistir vídeo do Rafael">
+          <span class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span>
+          <small>Assista antes de agendar</small>
+        </button>
+        <div class="video-tag" id="videoTag">
+          <span class="av">RS</span>
+          <span><b>Rafael Soares</b>Por que essa sessão existe</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Lucro real</span><span>Equipe com autonomia</span><span>Processos que rodam sem você</span><span>Preço com margem</span><span>Caixa previsível</span><span>Tempo com a família</span>
+    <span>Lucro real</span><span>Equipe com autonomia</span><span>Processos que rodam sem você</span><span>Preço com margem</span><span>Caixa previsível</span><span>Tempo com a família</span>
+  </div>
+</div>
+
+<!-- DIAGNÓSTICO -->
+<section class="diag" id="diagnostico">
+  <div class="wrap">
+    <div class="diag-head">
+      <div>
+        <span class="eyebrow reveal">Diagnóstico rápido</span>
+        <h2 class="reveal">Essa consultoria é <em class="gold">pra você</em>?</h2>
+      </div>
+      <p class="lead reveal">Marque com sinceridade o que você vive hoje. Se marcar <strong style="color:var(--text)">3 ou mais</strong>, a sessão foi feita para o seu momento.</p>
+    </div>
+
+    <div class="diag-layout">
+      <div class="groups" id="groups"></div>
+
+      <aside class="meter reveal" aria-live="polite">
+        <div class="count"><span id="count">0</span><small>/15</small></div>
+        <div class="bar"><i id="bar"></i></div>
+        <p id="verdict">Comece marcando os pontos que mais pesam no seu dia a dia.</p>
+        <a href="#oferta" class="btn btn-gold" id="diagCta" aria-disabled="true">Quero resolver isso
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTO -->
+<section class="cost">
+  <div class="wrap">
+    <span class="eyebrow reveal">O preço de continuar igual</span>
+    <h2 class="reveal">Trabalhar mais não resolveu até agora. <em class="gold">Não vai resolver</em> nos próximos 12 meses.</h2>
+    <p class="lead reveal">O problema não é falta de esforço. É falta de direção, de sistema e de alguém de fora olhando com frieza para o que está travando o seu negócio.</p>
+    <div class="cost-grid">
+      <div class="cost-card reveal"><div class="k gold">Margem</div><h4>Que escorre pelos dedos</h4><p>Entregas impecáveis com preço que não paga o esforço, descontos para não perder o cliente e escopo aumentando sem cobrança.</p></div>
+      <div class="cost-card reveal"><div class="k gold">Tempo</div><h4>Que você não recupera</h4><p>Tudo passa por você. Se você para, a empresa para. Férias viram culpa e descanso vira ansiedade.</p></div>
+      <div class="cost-card reveal"><div class="k gold">Energia</div><h4>Que está acabando</h4><p>A solidão do topo, decisões sem com quem dividir e a sensação de bater sempre no mesmo teto invisível.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="steps">
+  <div class="wrap">
+    <span class="eyebrow reveal">Como funciona</span>
+    <h2 class="reveal">Simples, direto e <em class="gold">feito pra você</em>.</h2>
+    <div class="steps-grid reveal">
+      <div class="step"><span class="n">01 — Reserva</span><h3>Você garante sua vaga</h3><p>Reserva feita, combinamos o melhor dia e horário. As vagas são poucas por mês, porque cada sessão é preparada de forma individual.</p></div>
+      <div class="step"><span class="n">02 — Sessão</span><h3>Olhamos seu cenário de perto</h3><p>Uma conversa estratégica, ao vivo e só entre nós dois. Vamos direto aos gargalos de vendas, equipe, preço, caixa e rotina.</p></div>
+      <div class="step"><span class="n">03 — Direção</span><h3>Você sai com o próximo passo</h3><p>Metas claras, prioridades definidas e um caminho prático para aumentar o lucro e tirar a operação das suas costas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTREGÁVEIS -->
+<section>
+  <div class="wrap deliv-grid">
+    <div>
+      <span class="eyebrow reveal">O que você leva</span>
+      <h2 class="reveal">Clareza para decidir. <em class="gold">Estrutura</em> para crescer.</h2>
+      <p class="lead reveal">Cada ponto da sessão é aplicado à realidade da sua empresa. Nada de teoria genérica ou fórmula de palco.</p>
+    </div>
+    <div class="deliv-list">
+      <div class="deliv reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><h4>Sessão estratégica individual</h4><p>Só você e eu, com foco total no seu negócio.</p></div>
+      <div class="deliv reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h4>Identificação dos gargalos</h4><p>Onde exatamente sua empresa está perdendo dinheiro e tempo.</p></div>
+      <div class="deliv reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h4>Metas e valores claros</h4><p>Números concretos e um preço que respeita a sua entrega.</p></div>
+      <div class="deliv reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h4>Rotina de líder</h4><p>Gestão de tempo para sair do operacional e liderar de verdade.</p></div>
+      <div class="deliv reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7z"/></svg></div><h4>Pensamento de dono</h4><p>Decidir com estratégia, e não no improviso do dia a dia.</p></div>
+      <div class="deliv reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><h4>Aumento do lucro</h4><p>Caminhos práticos para faturar melhor, e não só mais.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="about">
+  <div class="wrap">
+    <span class="eyebrow reveal">Quem conduz</span>
+    <blockquote class="reveal" style="margin-top:28px">Empresa boa não é a que depende do dono 24 horas. É a que <em class="gold">funciona</em>, dá lucro e devolve a vida de quem a construiu.</blockquote>
+    <div class="sig reveal"><span class="av">RS</span><span><b>Rafael Soares</b>Consultor de negócios</span></div>
+    <div class="pillars">
+      <div class="pillar reveal"><h4>Sem grupo</h4><p>Atendimento 100% individual. Seu negócio não é igual ao de ninguém.</p></div>
+      <div class="pillar reveal"><h4>Sem gravação</h4><p>Conversa ao vivo, confidencial e aplicada ao seu cenário real.</p></div>
+      <div class="pillar reveal"><h4>Sem enrolação</h4><p>Direto ao ponto: o que travar, o que priorizar e o que fazer depois.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRA QUEM -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow reveal">Seja honesto com você</span>
+    <h2 class="reveal">Pra quem é, e pra quem <em class="gold">não é</em>.</h2>
+    <div class="fit-grid">
+      <div class="fit yes reveal">
+        <h3>É pra você se…</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>Você é dono(a) de empresa e sente que carrega tudo sozinho(a).</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>Fatura, mas o lucro não acompanha o esforço.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>Quer uma equipe que funcione sem você cobrando o tempo todo.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>Está pronto(a) para ouvir a verdade e agir sobre ela.</li>
+        </ul>
+      </div>
+      <div class="fit no reveal">
+        <h3>Não é pra você se…</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Procura fórmula mágica ou resultado sem execução.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Prefere um curso gravado e genérico.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Não está disposto(a) a mudar a forma como toca o negócio.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Quer só desabafar, sem sair com um plano.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="offer" id="oferta">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow reveal">Sua vaga</span>
+    <h2 class="reveal">Uma decisão hoje. <em class="gold">Outro negócio</em> amanhã.</h2>
+  </div>
+  <div class="wrap">
+    <div class="offer-card reveal">
+      <div class="offer-left">
+        <h3>Tudo que está incluso</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>Sessão individual estratégica</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>Identificação dos gargalos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>Definição clara de metas e valores</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>Gestão de tempo e rotina de líder</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>Como ter pensamento de dono</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>Caminhos para aumentar o lucro</li>
+        </ul>
+      </div>
+      <div class="offer-right">
+        <span class="badge"><i class="pulse"></i> Vagas limitadas este mês</span>
+        <div class="old">Valor normal: <s>R$ 3.500</s></div>
+        <div class="price"><span class="cur">R$</span><span class="val">2.640</span></div>
+        <div class="save">Você economiza R$ 860 reservando agora</div>
+        <a href="#" class="btn btn-gold" data-cta>Quero minha vaga
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="fine">Atendimento individual e online · Agenda combinada com você</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap faq-grid">
+    <div>
+      <span class="eyebrow reveal">Dúvidas</span>
+      <h2 class="reveal">Perguntas <em class="gold">frequentes</em>.</h2>
+      <p class="lead reveal">Ficou alguma dúvida? Me chama no WhatsApp e eu respondo pessoalmente.</p>
+      <a href="#" class="btn btn-ghost reveal" style="margin-top:28px" data-wa="Olá Rafael! Tenho uma dúvida sobre a consultoria individual.">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>
+        Falar com o Rafael
+      </a>
+    </div>
+    <div class="reveal">
+      <details><summary>A sessão é realmente individual?<span class="pm"></span></summary><p>Sim. É uma conversa só entre você e eu. Sem grupo, sem turma e sem conteúdo gravado: o foco é 100% o seu negócio.</p></details>
+      <details><summary>Como funciona o atendimento online?<span class="pm"></span></summary><p>Depois da reserva, combinamos o dia e o horário e a sessão acontece por videochamada. Você pode participar de qualquer lugar.</p></details>
+      <details><summary>Serve para qualquer tipo de empresa?<span class="pm"></span></summary><p>Serve para donos e donas de negócio que já estão operando e sentem que o esforço não está virando lucro, organização e tempo livre. Se tiver dúvida sobre o seu caso, me chama antes de reservar.</p></details>
+      <details><summary>Por que as vagas são limitadas?<span class="pm"></span></summary><p>Cada sessão é preparada e conduzida de forma individual. Para manter a qualidade, eu abro poucas vagas por mês.</p></details>
+      <details><summary>O que eu preciso levar para a sessão?<span class="pm"></span></summary><p>Sua realidade, sem filtro. Quanto mais clareza você trouxer sobre faturamento, equipe e rotina, mais preciso será o direcionamento.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow reveal">Vamos conversar?</span>
+    <h2 class="reveal">Você não precisa carregar a empresa <em class="gold">sozinho</em>.</h2>
+    <p class="lead reveal">Se o seu negócio precisa de um direcionamento direto, reserve sua vaga. Dúvidas? Me chama no WhatsApp.</p>
+    <div class="cta-row reveal">
+      <a href="#oferta" class="btn btn-gold">Quero agendar
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#" class="btn btn-ghost" data-wa="Olá Rafael! Tenho uma dúvida sobre a consultoria individual.">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>
+        Tirar dúvida
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#topo" class="logo">RAFAEL<span>SOARES</span></a>
+    <span>© <span id="year"></span> Rafael Soares · Consultoria individual</span>
+  </div>
+</footer>
+
+<a href="#" class="wa-float" data-wa="Olá Rafael! Vim pelo site e quero saber mais sobre a consultoria." aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.2c-.2.2-.3.2-.6.1-1.6-.8-2.7-1.5-3.8-3.3-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+</a>
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="#oferta" class="btn btn-gold">Garantir minha vaga · R$ 2.640</a>
+</div>
+
+<script>
+/* ======== CONFIGURAÇÃO — edite aqui ======== */
+const CONFIG = {
+  whatsapp: "5500000000000",   // DDI + DDD + número, só dígitos
+  checkoutUrl: "",             // link de pagamento/agendamento (vazio = WhatsApp)
+  videoUrl: "",                // URL do vídeo .mp4 (vazio = esconde o player)
+  videoPoster: ""              // imagem de capa do vídeo (opcional)
+};
+/* =========================================== */
+
+const PAINS = [
+  {g:"Vendas", items:[
+    "Envio propostas detalhadas, mas perco o cliente na etapa final para concorrentes mais baratos.",
+    "Não consigo atrair clientes qualificados de forma ativa. Dependo de indicação ou do acaso.",
+    "Continuo aceitando clientes desalinhados só pelo medo de perder o contrato."
+  ]},
+  {g:"Equipe", items:[
+    "Tenho dificuldade para recrutar, treinar e reter pessoas que trabalhem com autonomia.",
+    "As decisões estão centralizadas em mim. Se eu não cobro, ninguém faz nada.",
+    "Mudo as prioridades com tanta frequência que a equipe fica confusa e nada chega ao fim."
+  ]},
+  {g:"Dinheiro", items:[
+    "Minhas entregas são impecáveis e de alto padrão, mas a margem de lucro não acompanha.",
+    "Vivo de picos de faturamento seguidos de períodos na corda bamba e aperto no caixa.",
+    "Não consigo impor limites nas negociações e aceito prazos absurdos e mudanças de escopo sem cobrar."
+  ]},
+  {g:"Crescimento", items:[
+    "Por mais que eu me dedique, a empresa bateu em um teto invisível que impede a escala.",
+    "Não tenho processos claros. Cada coisa é feita de um jeito, dependendo de quem faz.",
+    "Não sei exatamente quais números acompanhar para tomar decisões com segurança."
+  ]},
+  {g:"Você", items:[
+    "Sinto culpa quando tento descansar com quem eu amo, como se tudo fosse desmoronar.",
+    "Enfrento a solidão do topo: não tenho com quem dividir o peso real das decisões.",
+    "Trabalho cada vez mais horas e sinto que estou sempre apagando incêndio."
+  ]}
+];
+
+const $ = s => document.querySelector(s);
+const waLink = msg => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+const checked = new Set();
+
+// Diagnóstico
+const groups = $("#groups");
+let idx = 0;
+PAINS.forEach(({g, items}) => {
+  const el = document.createElement("div");
+  el.className = "group reveal";
+  el.innerHTML = `<h3><i>✦</i>${g}</h3>`;
+  items.forEach(t => {
+    const i = idx++;
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "pain"; b.setAttribute("aria-pressed", "false");
+    b.innerHTML = `<span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></span><span>${t}</span>`;
+    b.addEventListener("click", () => {
+      checked.has(i) ? checked.delete(i) : checked.add(i);
+      b.setAttribute("aria-pressed", checked.has(i));
+      updateMeter();
+    });
+    el.appendChild(b);
+  });
+  groups.appendChild(el);
+});
+
+function updateMeter(){
+  const n = checked.size, total = idx;
+  $("#count").textContent = n;
+  $("#bar").style.width = (n / total * 100) + "%";
+  const cta = $("#diagCta");
+  let v;
+  if (n === 0) v = "Comece marcando os pontos que mais pesam no seu dia a dia.";
+  else if (n < 3) v = `Você marcou <strong>${n}</strong>. Continue: seja sincero com você.`;
+  else if (n < 7) v = `<strong>Essa sessão é pra você.</strong> Esses ${n} pontos têm a mesma raiz, e é exatamente ela que vamos atacar.`;
+  else v = `<strong>Sinal vermelho.</strong> Com ${n} pontos, cada mês sem direção está custando caro. Vamos resolver isso juntos.`;
+  $("#verdict").innerHTML = v;
+  cta.setAttribute("aria-disabled", n < 3 ? "true" : "false");
+}
+
+// CTAs
+function goCheckout(e){
+  if (CONFIG.checkoutUrl){ e.preventDefault(); window.open(CONFIG.checkoutUrl, "_blank", "noopener"); return; }
+  e.preventDefault();
+  let msg = "Olá Rafael! Quero garantir minha vaga na consultoria individual (R$ 2.640).";
+  if (checked.size) msg += `\n\nNo diagnóstico do site, marquei ${checked.size} pontos que vivo hoje.`;
+  window.open(waLink(msg), "_blank", "noopener");
+}
+document.querySelectorAll("[data-cta]").forEach(a => {
+  if (a.closest(".nav")) return; // nav leva para a oferta
+  a.addEventListener("click", goCheckout);
+});
+document.querySelectorAll("[data-wa]").forEach(a => {
+  a.href = waLink(a.dataset.wa); a.target = "_blank"; a.rel = "noopener";
+});
+
+// Vídeo
+const video = $("#heroVideo"), play = $("#playBtn"), tag = $("#videoTag");
+if (CONFIG.videoUrl){
+  video.src = CONFIG.videoUrl;
+  if (CONFIG.videoPoster) video.poster = CONFIG.videoPoster;
+  play.addEventListener("click", () => { video.controls = true; video.play(); play.classList.add("hidden"); tag.style.display = "none"; });
+} else {
+  $("#videoCard").parentElement.style.display = "none";
+  document.querySelector(".hero-grid").style.gridTemplateColumns = "1fr";
+}
+
+// Nav, sticky CTA
+const nav = $("#nav"), sticky = $("#stickyCta"), offer = $("#oferta");
+let offerVisible = false;
+new IntersectionObserver(([e]) => { offerVisible = e.isIntersecting; onScroll(); }, {threshold:.15}).observe(offer);
+function onScroll(){
+  const y = window.scrollY;
+  nav.classList.toggle("scrolled", y > 20);
+  sticky.classList.toggle("show", y > 700 && !offerVisible);
+}
+addEventListener("scroll", onScroll, {passive:true});
+
+// Reveal
+const io = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+}), {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".reveal").forEach((el, i) => {
+  el.style.transitionDelay = (i % 4) * 70 + "ms";
+  io.observe(el);
+});
+
+$("#year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
